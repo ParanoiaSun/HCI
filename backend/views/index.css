@@ -1,0 +1,796 @@
+/**
+ * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
+ * http://cssreset.com
+ */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, input {
+    border: 0;
+    font-size: 100%;
+    font-weight: normal;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* custom */
+a {
+    color: #7e8c8d;
+    text-decoration: none;
+    -webkit-backface-visibility: hidden;
+}
+
+li {
+    list-style: none;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+::-webkit-scrollbar-track-piece {
+    background-color: rgba(0, 0, 0, 0.2);
+    -webkit-border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:vertical {
+    height: 5px;
+    background-color: rgba(125, 125, 125, 0.7);
+    -webkit-border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+    width: 5px;
+    background-color: rgba(125, 125, 125, 0.7);
+    -webkit-border-radius: 6px;
+}
+
+html, body {
+    width: 100%;
+    background-color: #EEEEEE;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    -webkit-text-size-adjust: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    background-color: #EEEEEE;
+}
+
+#app {
+    background-color: #EEEEEE;
+}
+
+.login-form-title {
+    font-size: 18px;
+    font-weight: bolder;
+    margin-bottom: 10px;
+}
+
+.login-form-button {
+    margin-right: 5px;
+    margin-top: 10px;
+}
+
+.log-out {
+    font-size: 12px;
+    margin-left: 10px;
+}
+
+/* main */
+
+.main-div {
+    background-color: #EEEEEE;
+    min-height: 100%;
+}
+
+.content-div {
+    width: 900px;
+    margin: 20px auto 0 auto;
+    background-color: #FFFFFF;
+    box-shadow: 0 0 5px #EEEEEE;
+}
+
+/* header */
+.header {
+    background-color: #FFFFFF;
+    padding: 10px 30px;
+    max-height: 55px;
+    min-width: 1024px;
+}
+
+.header-item {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.header-search {
+    margin-left: 30px;
+}
+
+.header-right-part {
+    float: right;
+}
+
+.header-user {
+    font-size: 15px;
+}
+
+.separate-line {
+    height: 35px;
+    width: 20px;
+    border-left: 1px solid #EEEEEE;
+    margin-left: 20px;
+}
+
+.right-item {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.nav-item {
+    font-size: 15px;
+    font-weight: bolder;
+    color: #999999;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 10px;
+}
+
+.nav-item a {
+    font-size: 15px;
+    font-weight: bolder;
+    color: #999999;
+}
+
+.nav-item a:hover{
+    color: #111111;
+}
+
+/* main page */
+
+/* profile */
+.profile-title {
+    font-size: 20px;
+    font-weight: bolder;
+    margin-bottom: 20px;
+}
+
+.profile-content {
+    padding: 30px 30px;
+}
+
+.profile-avatar {
+    display: inline-block;
+    vertical-align: top;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    box-shadow: 0 0 5px #CCCCCC;
+}
+
+.profile-info {
+    display: inline-block;
+    margin-left: 30px;
+}
+
+.profile-info-item {
+    font-size: 15px;
+    font-weight: bolder;
+    margin: 5px 0;
+}
+
+.profile-info-content{
+    font-weight: normal;
+    margin-left: 20px;
+}
+
+.profile-detail {
+    margin: 20px 0;
+}
+
+.ant-tabs-nav {
+    height: 40px;
+}
+
+.follow-avatar {
+    width: 70px;
+    height: 70px;
+    overflow: hidden;
+    margin: 20px 10px;
+    display: inline-block;
+}
+
+/* blog */
+.blog-page {
+    padding: 30px;
+}
+
+.user-card {
+    width: 200px;
+    box-shadow: 0 0 5px #CCCCCC;
+}
+
+.card-avatar {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+}
+
+.card-info {
+    display: flex;
+    width: 200px;
+    padding: 10px 0;
+}
+
+.card-info-item {
+    flex: 1;
+    text-align: center;
+}
+
+.card-title {
+    font-weight: bolder;
+}
+
+.card-area {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.blog-twitter-content {
+    display: inline-block;
+    margin-left: 30px;
+}
+
+.blog-twitter {
+    padding: 20px 20px 50px 20px;
+    box-shadow: 0 0 5px #CCCCCC;
+    margin-bottom: 20px;
+    width: 600px;
+}
+
+.blog-twitter-des {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.blog-twitter-time {
+    color: #999999;
+    display: inline-block;
+    margin: 10px 20px 10px 0;
+}
+
+.blog-icon {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.blog-icon .ant-btn {
+    border: none 0;
+    padding: 0;
+    height: auto;
+}
+
+.blog-twitter-repost-tag {
+    color: #999999;
+}
+
+.blog-twitter hr {
+    margin: 10px 30px 10px 0;
+    height: 1px;
+    border:none;
+    border-top:1px solid #EEEEEE;
+}
+
+.blog-like-num {
+    margin-left: 5px;
+}
+
+.blog-review-button {
+    margin-top: 10px;
+    float: right;
+}
+
+.blog-twitter-img {
+    cursor: url('./img/magnifier.png'),auto;
+}
+
+/* Activity */
+.activity-page {
+    padding: 20px 20px 100px 20px;
+}
+
+.activity-item {
+    padding: 20px;
+    box-shadow: 0 0 5px #CCCCCC;
+    margin-bottom: 20px;
+}
+
+.activity-item-title {
+    font-size: 15px;
+    font-weight: bolder;
+}
+
+.activity-item-time {
+    color: #999999;
+    margin: 8px 0;
+}
+
+.activity-item-part {
+    color: #7e8c8d;
+    text-align: right;
+}
+
+.activity-item-join-state {
+    color: #AA0000;
+}
+
+.activity-title {
+    font-size: 18px;
+    font-weight: bolder;
+    margin-bottom: 10px;
+}
+
+.activity-title-input {
+    margin-bottom: 10px;
+}
+
+.activity-title-input .ant-input {
+    width: 400px;
+}
+
+
+
+.activity-launch-content {
+    margin-top: 10px;
+}
+
+.activity-launch-button {
+    float: right;
+    margin-top: 20px;
+}
+
+/* login */
+#components-form-demo-normal-login .login-form {
+    max-width: 300px;
+}
+#components-form-demo-normal-login .login-form-forgot {
+    float: right;
+}
+#components-form-demo-normal-login .login-form-button {
+    width: 100%;
+}
+
+.login-form .ant-input-affix-wrapper{
+    height: 30px;
+}
+
+.login-form-wrapper {
+    width: 300px;
+    margin: 0 auto;
+    background-color: #FFFFFF;
+    box-shadow: 0 0 5px #CCCCCC;
+    padding: 30px 20px;
+}
+
+.login-page {
+    background-color: #EEEEEE;
+    min-height: 100%;
+    padding-top: 100px;
+}
+
+.album-page {
+    background-color: #FFFFFF;
+    padding: 10px 10px 100px 10px;
+}
+
+.album-add-button {
+    display: inline-block;
+    margin-left: 20px;
+    vertical-align: middle;
+}
+
+.album-page .ant-btn {
+    display: inline-block;
+    margin-left: 10px;
+    margin-top: 60px;
+    vertical-align: top;
+    width: 270px;
+    height: 50px;
+}
+
+.album-page .ant-card {
+    display: inline-block;
+    margin: 10px;
+}
+
+.album-page .ant-tag {
+    margin: 3px 3px;
+}
+
+.album-page .ant-card-body {
+    padding: 15px 10px;
+}
+
+.album-content-page {
+    padding: 20px 20px 100px 20px;
+}
+
+.album-content-photo {
+    margin-top: 20px;
+}
+
+.album-photo-download .ant-btn{
+    border: none 0;
+    padding: 0;
+    height: auto;
+}
+
+.album-photo-download {
+    margin-left: 8px;
+    padding-top: 3px;
+    display: inline-block;
+}
+
+.album-photo-share {
+    margin: 10px 0 10px 0;
+}
+
+.album-photo-share-button {
+    display: inline-block;
+}
+
+.profile-button {
+    float: right;
+}
+
+.profile-button button{
+    margin: 0 5px;
+}
+
+/* Admin */
+.admin-page {
+    width: 900px;
+    margin: 0 auto;
+    background-color: #FFFFFF;
+    min-height: 100%;
+    padding: 30px;
+}
+
+.admin-user-avatar {
+    display: inline-block;
+    height: 40px;
+    overflow: hidden;
+    vertical-align: middle;
+    width: 80px;
+}
+
+.admin-user-id {
+    display: inline-block;
+    width: 150px;
+}
+
+.admin-user-name {
+    display: inline-block;
+    width: 150px;
+}
+
+.admin-user-item {
+    padding: 5px;
+    box-shadow: 0 0 5px #CCCCCC;
+    margin: 10px 0;
+}
+
+.admin-page-title {
+    font-size: 20px;
+    font-weight: bolder;
+    margin-bottom: 25px;
+}
+
+.admin-user-action {
+    display: inline-block;
+    float: right;
+    margin-top: 5px;
+}
+
+.admin-user-action button{
+    margin: 0 5px;
+}
+
+#admin-form-header1 {
+    width: 80px;
+}
+
+#admin-form-header2 {
+    width: 150px;
+}
+
+#admin-form-header3 {
+    width: 150px;
+    margin-left: 0;
+}
+
+.admin-form-header {
+    display: inline-block;
+    margin-left: 5px;
+    font-weight: bolder;
+    margin-top: 20px;
+}
+
+.admin-enter-button {
+    text-align: center;
+    font-weight: bolder;
+    color: #188FFF;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.admin-user-info {
+    margin-top: 30px;
+}
+
+.admin-user-info-avatar {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.admin-user-info-detail {
+    display: inline-block;
+    margin: 20px 0 0 30px;
+}
+
+.admin-user-info-detail .detail-header {
+    font-weight: bolder;
+    display: inline-block;
+    margin: 15px 20px;
+    vertical-align: middle;
+}
+
+.admin-user-info .ant-btn{
+    margin-left: 17px;
+    margin-top: 20px;
+}
+
+.profile-content .activity-item{
+    margin: 20px 5px;
+}
+
+.profile-content .activity-item .ant-btn{
+    margin: 0 5px;
+}
+
+.profile-edit-content {
+    padding: 40px 30px 100px 30px;
+}
+
+.profile-edit-info-avatar {
+    box-shadow: 0 0 5px #CCCCCC;
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 30px;
+}
+
+.profile-edit-info-detail {
+    display: inline-block;
+    margin: 50px 0 0 30px;
+}
+
+.profile-edit-info-detail .profile-edit-detail-header {
+    font-weight: bolder;
+    display: inline-block;
+    margin: 15px 20px;
+    vertical-align: middle;
+}
+
+.profile-edit-content .ant-btn{
+    margin-left: 17px;
+    margin-top: 20px;
+}
+
+.activity-edit-page {
+    padding: 50px 40px 100px 50px;
+}
+
+.activity-edit-title {
+    margin-bottom: 20px;
+}
+
+.follow-avatar {
+    cursor: pointer;
+}
+
+.album-card {
+    vertical-align: top;
+}
+
+.album-button i {
+    cursor: pointer;
+}
+
+.album-card .ant-btn {
+    width: 60px;
+    height: 30px;
+    margin: 15px 3px 3px 3px;
+}
+
+.homepage-sider {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.homepage-twitter-part {
+    padding: 20px;
+    display: inline-block;
+    width: 644px;
+}
+
+.homepage-twitter-part .activity-item{
+    margin: 20px 5px;
+}
+
+.homepage-twitter-part .blog-twitter {
+    /*margin-left: 20px;*/
+}
+
+.unfollow-buttons {
+    display: inline-block;
+}
+
+.profile-edit-group {
+    margin-top: 50px;
+}
+
+.profile-edit-group p{
+    font-size: 20px;
+    font-weight: bolder;
+    margin-bottom: 20px;
+}
+
+.message-box {
+    box-shadow: 0 0 5px #CCCCCC;
+    margin-bottom: 20px;
+}
+
+.review-icon {
+    display: inline-block;
+    margin: 0 40px 0 0;
+    float: right;
+}
+
+.review-icon .ant-btn {
+    border: none 0;
+    padding: 0;
+    height: auto;
+}
+
+.twitter-homepage-username {
+    display: inline-block;
+    vertical-align: top;
+    margin: 15px 0 0 10px;
+}
+
+.message-box {
+    padding: 20px;
+}
+
+.message-username {
+    display: inline-block;
+    vertical-align: top;
+    margin: 15px 0 0 10px;
+}
+
+.message-text {
+    display: inline-block;
+    vertical-align: top;
+    margin: 15px 0 0 10px;
+}
+
+.message-img {
+    margin-top: 15px;
+    cursor: url('./img/magnifier.png'),auto;
+}
+
+.preview-tag {
+    margin-top: 10px;
+}
+
+.photo-search-page {
+    padding: 20px;
+}
+
+.search-title {
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.preview-img {
+    margin-bottom: 10px;
+}
+
+.preview-uploader {
+    margin-top: 10px;
+}
+
+.album-photo-edit-button {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.photo-edit-page {
+    padding: 30px 30px 100px 30px;
+}
+
+#canvasb {
+    border:1px solid #aaa;
+    margin-left: 30px;
+}
+
+#canvasa {
+    border:1px solid #aaa;
+}
+
+.edit-origin-img {
+    border:1px solid #aaa;
+    vertical-align: top;
+}
+
+.effect-button {
+    margin: 20px 0;
+}
+
+.effect-button .ant-btn{
+    margin: 0 5px;
+}
+
+.edit-back {
+    margin-bottom: 20px;
+}
+
+.edit-save-button {
+    float: right;
+}
+
+
+
+
+
+
+
+
+
+
