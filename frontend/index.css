@@ -359,7 +359,7 @@ body {
 
 .activity-item-part {
     color: #7e8c8d;
-    text-align: right;
+    text-align: left;
 }
 
 .activity-item-join-state {
@@ -389,6 +389,11 @@ body {
 .activity-launch-button {
     float: right;
     margin-top: 20px;
+}
+
+
+.right-button{
+   text-align: right;
 }
 
 /* login */

@@ -29,7 +29,7 @@ const Activity = function(props) {
                 <div className="activity-item-part">
                     {item.participant_num} people have joined this activity.
                 </div>
-                {checkSate(item.state ,item.id)}
+                <div className="right-button">{checkSate(item.state ,item.id)}</div>
             </div>;
         });
     }
