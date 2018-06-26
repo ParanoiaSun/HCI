@@ -243,7 +243,7 @@ body {
 
 /* blog */
 .blog-page {
-    padding: 30px;
+    padding: 10px;
 }
 
 .user-card {
@@ -274,6 +274,7 @@ body {
 
 .card-area {
     display: inline-block;
+    float: left;
     vertical-align: top;
 }
 
