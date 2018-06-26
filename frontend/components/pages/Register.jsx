@@ -78,7 +78,7 @@ class RegisterForm extends React.Component {
                     </Button>
                     <div>
                       <center>
-                        Or <Link to={{ pathname: '/login'}}>login now!</Link>
+                        Or&nbsp;<Link to={{ pathname: '/login'}}>login now!</Link>
                       </center>
                     </div>
                 </FormItem>
