@@ -105,7 +105,6 @@ body {
     margin-right: 5px;
     margin-top: 10px;
 }
-
 .log-out {
     font-size: 12px;
     margin-left: 10px;
@@ -120,7 +119,7 @@ body {
 
 .content-div {
     width: 900px;
-    margin: 20px auto 0 auto;
+    margin: 70px auto 0 auto;
     background-color: #FFFFFF;
     box-shadow: 0 0 5px #EEEEEE;
 }
@@ -131,6 +130,13 @@ body {
     padding: 10px 30px;
     max-height: 55px;
     min-width: 1024px;
+    width: 100%;
+
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 999;
+
 }
 
 .header-item {
@@ -280,7 +286,7 @@ body {
     padding: 20px 20px 50px 20px;
     box-shadow: 0 0 5px #CCCCCC;
     margin-bottom: 20px;
-    width: 600px;
+    width: 650px;
 }
 
 .blog-twitter-des {
@@ -646,17 +652,56 @@ body {
     height: 30px;
     margin: 15px 3px 3px 3px;
 }
-
 .homepage-sider {
     display: inline-block;
     vertical-align: top;
 }
-
 .homepage-twitter-part {
     padding: 20px;
     display: inline-block;
-    width: 644px;
+    float: right;
+    background-color: rgb(255, 255, 255);
+    top:inherit;
+    width: 700px;
 }
+
+.obtain a{
+  font-size:15px;
+}
+.obtain{
+  background-color: rgb(220,220,220);
+}
+.ant-menu-item .anticon + span, .ant-menu-submenu-title{
+  background-color: rgb(220,220,220);
+  width: 200px;
+}
+.secondary{
+  background-color : rgba(0,0,0,0.2);
+}
+.secondary:hover{
+  background-color: rgb(235,235,235);
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+}
+.ant-menu-item .anticon + span, .ant-menu-submenu-title .anticon{
+  font-size: 15px;
+}
+.ant-menu-item .anticon + span, .ant-menu-submenu-title .anticon + span{
+  font-size: 15px;
+}
+.main-page{
+  top:70px;
+}
+.menubk{
+  background-color: gray;
+  width: 200px;
+  float:left;
+  top:inherit;
+  position: fixed;
+}
+
 
 .homepage-twitter-part .activity-item{
     margin: 20px 5px;
@@ -784,13 +829,3 @@ body {
 .edit-save-button {
     float: right;
 }
-
-
-
-
-
-
-
-
-
-
