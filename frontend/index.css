@@ -250,6 +250,7 @@ body {
 /* blog */
 .blog-page {
     padding: 15px;
+    min-height: 500px;
 }
 
 .user-card {
@@ -842,4 +843,24 @@ body {
 
 .edit-save-button {
     float: right;
+}
+
+.help{
+  margin-left: 30px;
+  margin-right: 30px;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  text-align: left;
+}
+
+.help h1{
+  font-size: 20px;
+}
+
+.help h2{
+  font-size: 18px;
+}
+
+.help p{
+  font-size: 16px;
 }
