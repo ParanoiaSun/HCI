@@ -102,8 +102,14 @@ body {
 }
 
 .login-form-button {
-    margin-right: 5px;
     margin-top: 10px;
+    width: 100%;
+    float: left;
+}
+.register-form-button {
+    margin-top: 100px;
+    width: 100%;
+    text-align: center;
 }
 .log-out {
     font-size: 12px;
@@ -404,6 +410,7 @@ body {
     float: right;
 }
 #components-form-demo-normal-login .login-form-button {
+
     width: 100%;
 }
 
@@ -566,6 +573,7 @@ body {
 .admin-enter-button {
     text-align: center;
     font-weight: bolder;
+    font-size: 14px;
     color: #188FFF;
     text-decoration: underline;
     cursor: pointer;

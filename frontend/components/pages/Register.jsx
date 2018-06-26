@@ -76,7 +76,11 @@ class RegisterForm extends React.Component {
                     <Button type="primary" htmlType="submit" className="login-form-button">
                         Register
                     </Button>
-                    Or <Link to={{ pathname: '/login'}}>login now!</Link>
+                    <div>
+                      <center>
+                        Or <Link to={{ pathname: '/login'}}>login now!</Link>
+                      </center>
+                    </div>
                 </FormItem>
                 <Modal
                     title="Register Success"
