@@ -16,7 +16,8 @@ const ProfileEdit = function(props) {
     function saveChange () {
         const username = document.getElementById('edit-username').value;
         const email = document.getElementById('edit-email').value;
-        if(username.length > 0 && email.length > 0) {
+        var reg = new RegExp("^[a-z0-9]+([._\\-]*[a-z0-9])*@([a-z0-9]+[-a-z0-9]*[a-z0-9]+.){1,63}[a-z0-9]+$"); //正则表达式
+        if(username.length > 0 && email.length > 0 && reg.test(email)) {
             AdminStore.updateUserInfo(username, email, user.user_id);
             setTimeout('location.reload();', 800);
         } else
@@ -111,13 +112,13 @@ const ProfileEdit = function(props) {
             <img src={user.avatar} width="200" alt=""/>
         </div>
         <div className="profile-edit-info-detail">
-            <span className="profile-edit-detail-header">user id</span>
+            <span className="profile-edit-detail-header" style={{ width: 80 }}>user id</span>
             <span> {user.user_id} </span><br/>
-            <span className="profile-edit-detail-header">username</span>
+            <span className="profile-edit-detail-header" style={{ width: 80 }}>username</span>
             <Input placeholder="username" defaultValue={user.username} style={{ width: 200, height: 30 }} id="edit-username"/><br/>
-            <span className="profile-edit-detail-header">email</span>
+            <span className="profile-edit-detail-header" style={{ width: 80 }}>email</span>
             <Input placeholder="email" defaultValue={user.email} style={{ width: 200, height: 30 }} id="edit-email"/><br/>
-            <Button type="primary" onClick={saveChange}> Save </Button>
+            <Button type="primary" onClick={saveChange} style={{ marginLeft: 260 }}> Save </Button>
         </div>
         <div className="profile-edit-group">
             <p>Group Edit</p>

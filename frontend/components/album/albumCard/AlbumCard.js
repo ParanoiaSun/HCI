@@ -133,13 +133,16 @@ const AlbumCard = function(props) {
     }
 
     function deleteAlbum (id) {
-        AlbumStore.deleteAlbum(id);
+        var r = confirm("Are you confirming to delete this album?");
+        if(r == true) {
+            AlbumStore.deleteAlbum(id);
+        }
     }
 
     return <Card title={album.album_name} className="album-card"
                  extra={<div className="album-button">
                      <Link to={{ pathname: '/album/id/' + album.album_id}}>
-                         <Icon type="eye" style={{ fontSize: 16, color: '#08c' }}/>
+                         <Icon type="eye" style={{ fontSize: 16, color: '#08c',marginTop: 12 }}/>
                      </Link>
                      <Icon onClick={deleteAlbum.bind(this, album.album_id)}
                            type="delete" style={{ fontSize: 16, color: '#08c', marginLeft: 10 }}/>
