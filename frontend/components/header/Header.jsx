@@ -8,6 +8,19 @@ var Header = function(props) {
     const Search = Input.Search;
     const userInfo = UserStore.getUserInfo(localStorage.getItem('photoWall_user_id'));
 
+    window.onload=function(){
+        var pathname = location.href
+
+        if(pathname.search("homepage")!=-1)
+            document.getElementById("HOME").className='active';
+        else if(pathname.search("blog")!=-1)
+            document.getElementById("BLOG").className='active';
+        else if(pathname.search("album")!=-1)
+            document.getElementById("ALBUM").className='active';
+        else
+            document.getElementById("ACTIVITY").className='active';
+    }
+
     function clearLogin () {
         localStorage.removeItem('photoWall_user_id');
     }
@@ -16,7 +29,7 @@ var Header = function(props) {
         location.reload();
     }
 
-    function refresh () {
+    function refresh (id) {
         location.reload();
     }
 
@@ -47,22 +60,22 @@ var Header = function(props) {
         <div className="header-right-part">
             <div className="header-navbar right-item">
                 <div className="nav-item">
-                    <Link to={{ pathname: '/'}} onClick={refresh}>
+                    <Link id="HOME" to={{ pathname: '/'}} onClick={refresh.bind(this,"HOME")}>
                         HOME
                     </Link>
                 </div>
                 <div className="nav-item">
-                    <Link to={{ pathname: '/activity'}} onClick={refresh}>
+                    <Link id="ACTIVITY" to={{ pathname: '/activity'}} onClick={refresh.bind(this,"ACTIVITY")}>
                         ACTIVITY
                     </Link>
                 </div>
                 <div className="nav-item">
-                    <Link to={{ pathname: '/blog/' + userInfo.user_id}} onClick={refresh}>
+                    <Link id="BLOG" to={{ pathname: '/blog/' + userInfo.user_id}} onClick={refresh.bind(this,"BLOG")}>
                         BLOG
                     </Link>
                 </div>
                 <div className="nav-item">
-                    <Link to={{ pathname: '/album/' + userInfo.user_id}} onClick={refresh}>
+                    <Link id="ALBUM" to={{ pathname: '/album/' + userInfo.user_id}} onClick={refresh.bind(this,"ALBUM")}>
                         ALBUM
                     </Link>
                 </div>
