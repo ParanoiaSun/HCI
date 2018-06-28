@@ -89,4 +89,8 @@ router.post('/groupEdit', function(req, res, next) {
     userService.editGroup(req, res);
 });
 
+router.get('/search/:id', function(req, res, next) {
+    userService.getUserById(req.params.id, res);
+});
+
 module.exports = router;

@@ -53,7 +53,7 @@ ReactDOM.render(
             <Route path="profile/:id" component={ProfileController} onEnter={requireAuth}/>
             <Route path="profile_edit" component={ProfileEditController} onEnter={requireAuth}/>
             <Route path="user/:id" component={MainPageController} onEnter={requireAuth}/>
-            <Route path="activity" component={ActivityController} onEnter={requireAuth}/>
+            <Route path="activity/:page" component={ActivityController} onEnter={requireAuth}/>
             <Route path="activity/edit/:id" component={ActivityEditController} onEnter={requireAuth}/>
             <Route path="forum" component={ForumController} onEnter={requireAuth}/>
         </Route>

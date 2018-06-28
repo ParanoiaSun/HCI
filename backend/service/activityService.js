@@ -43,6 +43,72 @@ exports.getAllActivities = function (req, res) {
     });
 };
 
+exports.getActivitiesByPage = function (page, res) {
+    var sql = 'SELECT count(*) AS \'total\' FROM activity WHERE deleted=0 ORDER BY id DESC';
+    var param = [];
+    var total = 0;
+    database.query(sql, param, function (err, result) {
+        if (err) {
+            res.send({message: 20});
+        } else {
+            total = result[0].total;
+            var sql = 'SELECT * FROM activity WHERE deleted=0 AND id>? AND id<? ORDER BY id DESC';
+            var param = [total-page*10-1, total-(page-1)*10+1];
+            console.log(result.total);
+            var result1 = []; var i = 0;
+            var state = [];
+            database.query(sql, param, function (err, result) {
+                if (err) {
+                    res.send({message: 20});
+                } else {
+                    if (result.length === 0){
+                        res.send({message: 21});
+                    } else {
+                        result1 = result;
+                        var data = [];
+                        for (i = 0; i < result1.length; i++) {
+                            var end = new Date(result[i].end_time + ' 00:00:00');
+                            var date = new Date(getNowFormatDate());
+                            if (date < end)
+                                state.push('ongoing');
+                            else
+                                state.push('finished');
+                            data.push({
+                                id: result1[i].id,
+                                name: result1[i].title,
+                                start_time: result1[i].start_time,
+                                end_time: result1[i].end_time,
+                                state: state[i],
+                                participant_num: result1[i].part_num,
+                                description: result1[i].description
+                            });
+                        }
+                        res.send({
+                            message: 25,
+                            data: data
+                        });
+                    }
+                }
+            });
+        }
+    });
+};
+
+exports.getAllActivitiesNum = function (req, res) {
+    var sql = 'SELECT count(*) AS \'total\' FROM activity WHERE deleted=0 ORDER BY id DESC';
+    var param = [];
+    database.query(sql, param, function (err, result) {
+        if (err) {
+            res.send({message: 20});
+        } else {
+            res.send({
+                message: 25,
+                num: result[0].total
+            });
+        }
+    });
+};
+
 exports.addActivity = function (req, res) {
     var sql = 'INSERT INTO activity(user_id, title, start_time, end_time, description, deleted, part_num) VALUES(?,?,?,?,?,?,?)';
     var param = [req.body.userId, req.body.title, req.body.startTime, req.body.endTime, req.body.des, 0, 0];

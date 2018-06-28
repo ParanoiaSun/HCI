@@ -184,13 +184,13 @@ const AlbumContent = function(props) {
                         <div className="album-photo-share-button">
                             <Button type="primary" onClick={this.sharePhoto.bind(this, previewImage)}>SHARE</Button>
                         </div>
-                        { (user_id === localStorage.getItem('photoWall_user_id'))?
-                            <div className="album-photo-edit-button">
-                                <Link to={{ pathname: '/photo/edit/' + photoId}}>
-                                    <Button type="primary" >EDIT</Button>
-                                </Link>
-                            </div> : null
-                        }
+                        {/*{ (user_id === localStorage.getItem('photoWall_user_id'))?*/}
+                            {/*<div className="album-photo-edit-button">*/}
+                                {/*<Link to={{ pathname: '/photo/edit/' + photoId}}>*/}
+                                    {/*<Button type="primary" >EDIT</Button>*/}
+                                {/*</Link>*/}
+                            {/*</div> : null*/}
+                        {/*}*/}
                         <div className="album-photo-download">
                             <a href={previewImage} download>
                                 <Button><Icon type="download" style={{ fontSize: 20, color: '#08c' }}/></Button>

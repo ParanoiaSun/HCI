@@ -1,5 +1,5 @@
 const React = require('react');
-import {Button, Input, DatePicker, message} from 'antd';
+import {Button, Input, DatePicker, message, Pagination} from 'antd';
 import ActivityStore from '../../stores/ActivityStore';
 
 const null_info = <span style={{color: '#AAAAAA'}}>Oh!There is no one here~</span>;
@@ -73,7 +73,6 @@ const Activity = function(props) {
     }
 
     function onChange(date, dateString) {
-        console.log(date, dateString);
         start_time = dateString[0];
         end_time = dateString[1];
     }
@@ -97,6 +96,7 @@ const Activity = function(props) {
     return <div className="activity-page">
         <div className="activity-title"> Activity List</div>
         {activityList(activity)}
+        <Pagination defaultCurrent={1} total={50} />
         <div className="create-activity">
             <div className="activity-title">Launch Your Own Activity</div>
             <div className="activity-title-input">
