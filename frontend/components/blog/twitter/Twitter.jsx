@@ -101,7 +101,7 @@ const Twitter = function(props) {
                     <div className="twitter-homepage-username">
                         <Link to={{ pathname: '/profile/' + user_id}}>{user_name}</Link>
                     </div>
-                    <hr/>
+                    <br/><br/>
                 </div> : null
         }
         {isOrigin? null : <div>

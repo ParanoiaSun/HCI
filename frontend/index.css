@@ -238,6 +238,7 @@ body {
 /* blog */
 .blog-page {
     padding: 30px;
+    background-color: #EEEEEE;
 }
 
 .user-card {
@@ -255,6 +256,7 @@ body {
     display: flex;
     width: 200px;
     padding: 10px 0;
+    background-color: #FFFFFF;
 }
 
 .card-info-item {
@@ -281,6 +283,7 @@ body {
     box-shadow: 0 0 5px #CCCCCC;
     margin-bottom: 20px;
     width: 600px;
+    background-color: #FFFFFF;
 }
 
 .blog-twitter-des {
@@ -332,12 +335,14 @@ body {
 /* Activity */
 .activity-page {
     padding: 20px 20px 100px 20px;
+    background-color: #EEEEEE;
 }
 
 .activity-item {
     padding: 20px;
     box-shadow: 0 0 5px #CCCCCC;
     margin-bottom: 20px;
+    background-color: #FFFFFF;
 }
 
 .activity-item-title {
@@ -414,7 +419,7 @@ body {
 }
 
 .album-page {
-    background-color: #FFFFFF;
+    background-color: #EEEEEE;
     padding: 10px 10px 100px 10px;
 }
 
@@ -653,9 +658,10 @@ body {
 }
 
 .homepage-twitter-part {
-    padding: 20px;
+    padding: 0 20px 20px 20px;
     display: inline-block;
     width: 644px;
+    background-color: #EEEEEE;
 }
 
 .homepage-twitter-part .activity-item{
@@ -663,6 +669,7 @@ body {
 }
 
 .homepage-twitter-part .blog-twitter {
+    background-color: #FFFFFF;
     /*margin-left: 20px;*/
 }
 
