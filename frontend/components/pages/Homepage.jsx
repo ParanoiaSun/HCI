@@ -39,7 +39,7 @@ export default class Homepage extends React.Component{
             return null_info;
         return array.map(function (item, i) {
             return <Menu.Item key={'/homepage/twitter/' + item.name}><Link to={{ pathname: '/homepage/twitter/' + item.name}} onClick={() => location.reload()}>
-                {item.name}
+                &nbsp;&nbsp;&nbsp;&nbsp;{item.name}
             </Link></Menu.Item>;
         });
     };
@@ -53,7 +53,7 @@ export default class Homepage extends React.Component{
             return null_info;
         return array.map(function (item, i) {
             return <Menu.Item key={'/homepage/message/' + item.name}><Link to={{ pathname: '/homepage/message/' + item.name}} onClick={() => location.reload()}>
-                {item.name}
+                &nbsp;&nbsp;&nbsp;&nbsp;{item.name}
             </Link></Menu.Item>;
         });
     };
@@ -72,18 +72,20 @@ export default class Homepage extends React.Component{
                 >
                     <Menu.Item key="/homepage/hot">
                         <Link to={{ pathname: '/homepage/hot'}} onClick={this.refresh}>
+                            <Icon type="star-o"/>
                             Hot Twitter
                         </Link>
                     </Menu.Item>
                     <Menu.Item key="/homepage/activity">
                         <Link to={{ pathname: '/homepage/activity'}} onClick={this.refresh}>
+                            <Icon type="calendar"/>
                             Joined Activities
                         </Link>
                     </Menu.Item>
                     <SubMenu key="sub1" title={<span><Icon type="picture" /><span>Twitters</span></span>}>
                         <Menu.Item key="/homepage/twitter/all">
                             <Link to={{ pathname: '/homepage/twitter/all'}} onClick={this.refresh}>
-                                all
+                                &nbsp;&nbsp;&nbsp;&nbsp;all
                             </Link>
                         </Menu.Item>
                         {this.twitterGroupList()}
@@ -91,7 +93,7 @@ export default class Homepage extends React.Component{
                     <SubMenu key="sub2" title={<span><Icon type="mail" /><span>Messages</span></span>}>
                         <Menu.Item key="/homepage/message/all">
                             <Link to={{ pathname: '/homepage/message/all'}} onClick={this.refresh}>
-                                all
+                                &nbsp;&nbsp;&nbsp;&nbsp;all
                             </Link>
                         </Menu.Item>
                         {this.messageGroupList()}

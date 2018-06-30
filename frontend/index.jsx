@@ -37,7 +37,7 @@ const requireAdmin = (nextState, replace) => {
 ReactDOM.render(
     (<Router history={hashHistory}>
         <Route path="/" component={Main}>
-            <IndexRedirect to="/homepage/hot/" />
+            <IndexRedirect to="/homepage/hot" />
             <Route path="homepage/" component={Homepage} onEnter={requireAuth}>
                 <IndexRoute component={HotTwitterController} onEnter={requireAuth}/>
                 <Route path="twitter/:id" component={FollowTwitterController} onEnter={requireAuth}/>
