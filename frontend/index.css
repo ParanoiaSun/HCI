@@ -181,6 +181,10 @@ body {
     color: #111111;
 }
 
+.nav-item a.active{
+    color: #111111;
+}
+
 /* main page */
 
 /* profile */
