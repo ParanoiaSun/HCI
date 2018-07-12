@@ -32,9 +32,9 @@ const Twitter = function(props) {
 
     function magnifier () {
         if(!scale)
-            document.getElementById('blog-twitter-img' + item.id).setAttribute("width", "560");
+            document.getElementById('blog-twitter-img' + item.id).setAttribute("width", "700");
         else
-            document.getElementById('blog-twitter-img' + item.id).setAttribute("width", "100");
+            document.getElementById('blog-twitter-img' + item.id).setAttribute("width", "200");
         scale = !scale;
     }
 
@@ -93,6 +93,7 @@ const Twitter = function(props) {
         }
         isLike = !isLike;
     }
+
     //08c
     return <div className="blog-twitter">
         {
@@ -107,11 +108,11 @@ const Twitter = function(props) {
         {isOrigin? null : <div>
             <span>Respot from <Link to={{ pathname: '/profile/' + origin_id}}>{origin_name}</Link></span>
             <hr/></div>}
-        <div className="blog-twitter-des">
-            {item.description}
+        <div className="blog-twitter-des" id={'twitter' + item.id} >
+            <p dangerouslySetInnerHTML={{ __html: item.description }}  />
         </div>
         <div className="blog-twitter-img" onClick={magnifier}>
-            <img src={item.img} id={'blog-twitter-img' + item.id} width="100" alt=""/>
+            <img src={item.img} id={'blog-twitter-img' + item.id} width="200" alt=""/>
         </div>
         <div className="blog-twitter-time">
             Send on {item.send_time}

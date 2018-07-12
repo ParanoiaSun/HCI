@@ -289,7 +289,7 @@ body {
     padding: 20px 20px 50px 20px;
     box-shadow: 0 0 5px #CCCCCC;
     margin-bottom: 20px;
-    width: 600px;
+    width: 790px;
     background-color: #FFFFFF;
 }
 
@@ -613,6 +613,9 @@ body {
 
 .profile-edit-content {
     padding: 40px 30px 100px 30px;
+    background-color: #FFFFFF;
+    margin-top: 20px;
+    box-shadow: 0 0 5px #EEEEEE;
 }
 
 .profile-edit-info-avatar {
@@ -673,7 +676,7 @@ body {
 .homepage-twitter-part {
     padding: 0 20px 20px 20px;
     display: inline-block;
-    width: 644px;
+    width: 824px;
     background-color: #EEEEEE;
 }
 

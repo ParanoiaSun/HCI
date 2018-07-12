@@ -149,6 +149,9 @@ const AlbumContent = function(props) {
             if(input.length === 0) {
                 message.info('Please input your share content');
             }else {
+                input = input.replace(/\r\n/g, '<br/>'); //IE9、FF、chrome
+                input = input.replace(/\n/g, '<br/>'); //IE7-8
+                input = input.replace(/\s/g, ' '); //空格处理
                 TwitterStore.sendTwitter(img, input);
             }
         };
@@ -186,9 +189,9 @@ const AlbumContent = function(props) {
                         </div>
                         {/*{ (user_id === localStorage.getItem('photoWall_user_id'))?*/}
                             {/*<div className="album-photo-edit-button">*/}
-                                <Link to={{ pathname: '/photo/edit/' + photoId}}>
-                                    <Button type="primary" >EDIT</Button>
-                                </Link>
+                                {/*<Link to={{ pathname: '/photo/edit/' + photoId}}>*/}
+                                    {/*<Button type="primary" >EDIT</Button>*/}
+                                {/*</Link>*/}
                             {/*</div> : null*/}
                         {/*}*/}
                         <div className="album-photo-download">
