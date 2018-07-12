@@ -186,9 +186,9 @@ const AlbumContent = function(props) {
                         </div>
                         {/*{ (user_id === localStorage.getItem('photoWall_user_id'))?*/}
                             {/*<div className="album-photo-edit-button">*/}
-                                {/*<Link to={{ pathname: '/photo/edit/' + photoId}}>*/}
-                                    {/*<Button type="primary" >EDIT</Button>*/}
-                                {/*</Link>*/}
+                                <Link to={{ pathname: '/photo/edit/' + photoId}}>
+                                    <Button type="primary" >EDIT</Button>
+                                </Link>
                             {/*</div> : null*/}
                         {/*}*/}
                         <div className="album-photo-download">

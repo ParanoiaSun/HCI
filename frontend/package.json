@@ -32,9 +32,6 @@
     "webpack": "^1.15.0",
     "webpack-dev-server": "~1.10.1"
   },
-  "theme": {
-    "primary-color": "#3CB46E"
-  },
   "devDependencies": {
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1"

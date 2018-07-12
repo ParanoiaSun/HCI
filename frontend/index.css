@@ -119,10 +119,8 @@ body {
 }
 
 .content-div {
-    width: 900px;
-    margin: 20px auto 0 auto;
-    background-color: #FFFFFF;
-    box-shadow: 0 0 5px #EEEEEE;
+    width: 1080px;
+    margin: 0 auto;
 }
 
 /* header */
@@ -192,6 +190,9 @@ body {
 
 .profile-content {
     padding: 30px 30px;
+    background-color: #FFFFFF;
+    box-shadow: 0 0 5px #EEEEEE;
+    margin-top: 20px;
 }
 
 .profile-avatar {
@@ -238,6 +239,9 @@ body {
 /* blog */
 .blog-page {
     padding: 30px;
+    background-color: #FFFFFF;
+    box-shadow: 0 0 5px #EEEEEE;
+    margin-top: 20px;
 }
 
 .user-card {
@@ -332,6 +336,8 @@ body {
 /* Activity */
 .activity-page {
     padding: 20px 20px 100px 20px;
+    background-color: #FFFFFF;
+    box-shadow: 0 0 5px #EEEEEE;
 }
 
 .activity-item {
@@ -416,6 +422,8 @@ body {
 .album-page {
     background-color: #FFFFFF;
     padding: 10px 10px 100px 10px;
+    box-shadow: 0 0 5px #EEEEEE;
+    margin-top: 20px;
 }
 
 .album-add-button {
@@ -448,6 +456,9 @@ body {
 
 .album-content-page {
     padding: 20px 20px 100px 20px;
+    background-color: #FFFFFF;
+    box-shadow: 0 0 5px #EEEEEE;
+    margin-top: 20px;
 }
 
 .album-content-photo {
@@ -730,6 +741,9 @@ body {
 
 .photo-search-page {
     padding: 20px;
+    background-color: #FFFFFF;
+    box-shadow: 0 0 5px #EEEEEE;
+    margin-top: 20px;
 }
 
 .search-title {
@@ -785,7 +799,36 @@ body {
     float: right;
 }
 
+.main-page {
+    margin-top: 20px;
+    background-color: #FFFFFF;
+    box-shadow: 0 0 5px #EEEEEE;
+}
 
+.activity-page {
+    margin-top: 20px;
+    background-color: #FFFFFF;
+    box-shadow: 0 0 5px #EEEEEE;
+}
+
+.cover-div {
+    height: 270px;
+    position: relative;
+}
+
+#main-cover {
+    width: 100%;
+}
+
+#activity-cover {
+    width: 100%;
+}
+
+.main-search {
+    position: absolute;
+    top:180px;
+    left: 20px;
+}
 
 
 

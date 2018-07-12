@@ -27,7 +27,6 @@ const Admin = function(props) {
                     if (temp === null || temp === undefined)
                         message.info('Can\'t find this id.');
                     else {
-                        console.log(111);
                         hashHistory.replace({
                             pathname: '/admin/' + temp.user_id
                         })

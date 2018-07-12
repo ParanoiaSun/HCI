@@ -93,7 +93,11 @@ const Activity = function(props) {
         }
     }
 
-    return <div className="activity-page">
+    return <div className="activity-wrapper">
+        <div className="cover-div">
+            <img id="activity-cover" src="img/cover2.jpg" alt=""/>
+        </div>
+        <div className="activity-page">
         <div className="activity-title"> Activity List</div>
         {activityList(activity)}
         <Pagination defaultCurrent={1} total={50} />
@@ -109,7 +113,7 @@ const Activity = function(props) {
             </div>
             <Button type="primary" className="activity-launch-button" onClick={addActivity}> LAUNCH </Button>
         </div>
-    </div>;
+    </div></div>;
 }
 
 module.exports = Activity;
