@@ -15,7 +15,7 @@ const TwitterStore = assign({}, EventEmitter.prototype, {
     quit: false,
     activity: {},
 
-    getActivities: function () {
+    getActivities: function (page) {
         $.ajax({
             async: false,
             type : 'GET',

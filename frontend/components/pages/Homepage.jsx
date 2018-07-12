@@ -1,9 +1,11 @@
 var React = require('react');
-import { Tabs, Button, message, Menu, Icon } from 'antd';
+import { Tabs, Button, message, Menu, Icon, Input } from 'antd';
 import { Link } from 'react-router';
+import { hashHistory } from 'react-router';
 import UserStore from '../../stores/UserStore';
 
 const SubMenu = Menu.SubMenu;
+const Search = Input.Search;
 
 export default class Homepage extends React.Component{
     rootSubmenuKeys = ['sub1', 'sub2'];
@@ -58,9 +60,32 @@ export default class Homepage extends React.Component{
         });
     };
 
+    searchPhotos = () => {
+        const input = document.getElementById('photo-search-input').value;
+        console.log(input);
+        if(input.length === 0) {
+            message.warn('Please input your search word.');
+        }else{
+            hashHistory.replace('search/' + input);
+            location.reload();
+        }
+    }
+
     render() {
         const { location } = this.props;
         return (
+            <div className="main-content">
+                <div className="cover-div">
+                    <img id="main-cover" src="img/cover1.jpg" alt=""/>
+                    <div className="main-search">
+                        <Search
+                            id="photo-search-input"
+                            placeholder="search photo by tag"
+                            onSearch={this.searchPhotos}
+                            style={{ width: 300, height: 30}}
+                        />
+                    </div>
+                </div>
             <div className="main-page">
                 <Menu
                     mode="inline"
@@ -102,6 +127,7 @@ export default class Homepage extends React.Component{
                 <div className="homepage-twitter-part">
                     {this.props.children}
                 </div>
+            </div>
             </div>
         );
     }

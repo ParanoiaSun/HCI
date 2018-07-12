@@ -318,6 +318,31 @@ exports.getFollowGroup = function(req, res) {
     });
 };
 
+exports.getUserById = function (id, res) {
+    var sql = 'SELECT * FROM user WHERE id=? AND deleted=0';
+    var param = [id];
+    database.query(sql, param, function (err, result) {
+        if (err) {
+            res.send({message: 20});
+        } else {
+            if (result.length === 0){
+                res.send({message: 21});
+            } else {
+                res.send({
+                    message: 25,
+                    data: {
+                        username: result[0].username,
+                        user_id: result[0].id,
+                        avatar: result[0].avatar,
+                        email: result[0].email
+                    }
+                });
+            }
+        }
+    });
+};
+
+
 function idGenerator () {
     var id = '';
     for(var i = 0; i < 8; i++) {

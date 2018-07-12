@@ -3,6 +3,7 @@ import { Input, message } from 'antd';
 import { Link } from 'react-router';
 import { hashHistory } from 'react-router';
 import UserStore from '../../stores/UserStore';
+import AdminStore from '../../stores/AdminStore';
 
 var Header = function(props) {
     const Search = Input.Search;
@@ -33,15 +34,20 @@ var Header = function(props) {
         location.reload();
     }
 
-    function searchPhotos () {
-        const input = document.getElementById('photo-search-input').value;
+    function searchUsers () {
+        const input = document.getElementById('user-search-input').value;
         console.log(input);
-        if(input.length === 0) {
-            message.warn('Please input your search word.');
-        }else{
-            hashHistory.replace('search/' + input);
-            location.reload();
-        }
+        if(input.length > 0) {
+            let temp = AdminStore.getUserById(input);
+            if (temp === null || temp === undefined)
+                message.info('Can\'t find this id.');
+            else {
+                hashHistory.replace({
+                    pathname: '/profile/' + temp.user_id
+                })
+            }
+        }else
+            message.info('Please Input complete id.')
     }
 
     return <div className="header">
@@ -50,9 +56,9 @@ var Header = function(props) {
         </div>
         <div className="header-search header-item">
             <Search
-                id="photo-search-input"
-                placeholder="search photo by tag"
-                onSearch={searchPhotos}
+                id="user-search-input"
+                placeholder="search user by ID"
+                onSearch={searchUsers}
                 style={{ width: 300, height: 30}}
             />
         </div>

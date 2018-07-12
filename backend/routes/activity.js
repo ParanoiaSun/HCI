@@ -10,6 +10,10 @@ router.get('/getAll', function(req, res, next) {
     // res.send({message: 20});
 });
 
+router.get('/getByPage/:page', function(req, res, next) {
+    activityService.getActivitiesByPage(req.params.page, res);
+});
+
 router.get('/get/:id', function(req, res, next) {
     activityService.getActivityById(req.params.id, res);
     // res.send({message: 20});
@@ -45,6 +49,10 @@ router.post('/edit', function(req, res, next) {
 
 router.get('/delete/:id', function(req, res, next) {
     activityService.deleteActivity(req.params.id, res);
+});
+
+router.get('/total', function(req, res, next) {
+    activityService.getAllActivitiesNum(req, res);
 });
 
 module.exports = router;
