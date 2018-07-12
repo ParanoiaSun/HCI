@@ -299,6 +299,8 @@ body {
     display: inline-block;
     float: left;
     vertical-align: top;
+    margin-right: 5px;
+    margin-left: 5px;
 }
 
 .blog-twitter-content {
@@ -706,7 +708,7 @@ body {
     background-color: #EEEEEE;
     width: 830px;
     min-height: 500px;
-    box-shadow: 0 0 10px #dddddd;
+    box-shadow: 0 0 5px #dddddd;
 }
 
 .obtain a{
