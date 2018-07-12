@@ -91,7 +91,7 @@ export default class Homepage extends React.Component{
                     mode="inline"
                     openKeys={this.state.openKeys}
                     onOpenChange={this.onOpenChange}
-                    style={{ width: 200 }}
+                    style={{ width: 250 }}
                     className="homepage-sider"
                     selectedKeys={[location.pathname]}
                 >

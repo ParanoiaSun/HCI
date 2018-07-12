@@ -306,7 +306,7 @@ body {
     padding: 20px 20px 50px 20px;
     box-shadow: 0 0 5px #CCCCCC;
     margin-bottom: 20px;
-    width: 600px;
+    width: 620px;
     background-color: #FFFFFF;
 }
 
@@ -341,6 +341,7 @@ body {
     height: 1px;
     border:none;
     border-top:1px solid #EEEEEE;
+    width: 580px;
 }
 
 .blog-like-num {
@@ -695,14 +696,13 @@ body {
 .homepage-twitter-part {
     padding: 0 20px 20px 20px;
     display: inline-block;
-<<<<<<< HEAD
-    width: 644px;
     background-color: #EEEEEE;
     top:inherit;
-    width: 700px;
+    width: 644px;
+    float:right;
 }
 
-.obtain a{
+/* .obtain a{
   font-size:15px;
 }
 .obtain{
@@ -722,19 +722,19 @@ body {
   -o-transition: all 1s ease;
   -ms-transition: all 1s ease;
 >>>>>>> wx
-}
+} */
 .ant-menu-item .anticon + span, .ant-menu-submenu-title .anticon{
   font-size: 15px;
 }
 .ant-menu-item .anticon + span, .ant-menu-submenu-title .anticon + span{
   font-size: 15px;
-}
+} */
 .main-page{
   top:70px;
 }
 .menubk{
   background-color: gray;
-  width: 200px;
+  width: 250px;
   float:left;
   top:inherit;
   position: fixed;
@@ -748,6 +748,7 @@ body {
 .homepage-twitter-part .blog-twitter {
     background-color: #FFFFFF;
     /*margin-left: 20px;*/
+
 }
 
 .unfollow-buttons {
@@ -901,6 +902,7 @@ body {
     position: absolute;
     top:180px;
     left: 20px;
+  }
 .help{
   margin-left: 30px;
   margin-right: 30px;
