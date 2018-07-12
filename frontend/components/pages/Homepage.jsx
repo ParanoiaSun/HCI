@@ -86,7 +86,6 @@ export default class Homepage extends React.Component{
                     </div>
                 </div>
             <div className="main-page">
-              <div className="menubk">
                 <Menu
                     mode="inline"
                     openKeys={this.state.openKeys}
@@ -124,11 +123,10 @@ export default class Homepage extends React.Component{
                         {this.messageGroupList()}
                     </SubMenu>
                   </Menu>
+                  <div className="homepage-twitter-part">
+                      {this.props.children}
+                  </div>
                 </div>
-                <div className="homepage-twitter-part">
-                    {this.props.children}
-                </div>
-            </div>
             </div>
         );
     }

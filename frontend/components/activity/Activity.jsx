@@ -106,7 +106,7 @@ const Activity = function(props) {
             <div className="activity-title-input">
                 <Input placeholder="Activity Title" id="activity-title"/>
             </div>
-            <RangePicker onChange={onChange} format={dateFormat} placeholder={['Start Time', 'End Time']}/>
+            <RangePicker className="dPicker" onChange={onChange} format={dateFormat} placeholder={['Start Time', 'End Time']}/>
             <div className="activity-launch-content">
                 <TextArea id="activity-des"
                     placeholder="Activity Description" autosize={{ minRows: 2, maxRows: 6 }} />

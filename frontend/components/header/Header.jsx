@@ -71,7 +71,7 @@ var Header = function(props) {
                     </Link>
                 </div>
                 <div className="nav-item">
-                    <Link id="ACTIVITY" to={{ pathname: '/activity'}} onClick={refresh.bind(this,"ACTIVITY")}>
+                    <Link id="ACTIVITY" to={{ pathname: '/activity/1'}} onClick={refresh.bind(this,"ACTIVITY")}>
                         ACTIVITY
                     </Link>
                 </div>

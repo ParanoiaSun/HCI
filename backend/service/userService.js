@@ -78,7 +78,7 @@ exports.getProfile = function (id, res) {
                         param = [id];
                         database.query(sql, param, function (err, result) {
                             result2 = result[0].sum;
-                            sql = 'SELECT COUNT(*) AS "sum" FROM TWITTER WHERE USER_ID=?;';
+                            sql = 'SELECT COUNT(*) AS "sum" FROM TWITTER WHERE USER_ID=? AND DELETED=0;';
                             param = [id];
                             database.query(sql, param, function (err, result) {
                                 result4 = result[0].sum;

@@ -20,6 +20,9 @@ time, mark, audio, video, input {
     font-weight: normal;
     vertical-align: baseline;
 }
+a{
+  font-size: 14px;
+}
 
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
@@ -121,11 +124,12 @@ body {
 .main-div {
     background-color: #EEEEEE;
     min-height: 100%;
+    padding-top: 70px;
 }
 
 .content-div {
     width: 1080px;
-    margin: 70px auto 0 auto;
+    margin: 0 auto;
     background-color: #FFFFFF;
     box-shadow: 0 0 5px #EEEEEE;
 }
@@ -258,10 +262,10 @@ body {
 .blog-page {
     padding: 15px;
     min-height: 500px;
-    padding: 30px;
+    /* padding: 30px; */
     background-color: #FFFFFF;
     box-shadow: 0 0 5px #EEEEEE;
-    margin-top: 20px;
+    /* margin-top: 20px; */
 }
 
 .user-card {
@@ -305,8 +309,8 @@ body {
 .blog-twitter {
     padding: 20px 20px 50px 20px;
     box-shadow: 0 0 5px #CCCCCC;
-    margin-bottom: 20px;
-    width: 800px;
+    margin-bottom: 10px;
+    width: 810px;
     background-color: #FFFFFF;
 }
 
@@ -341,7 +345,7 @@ body {
     height: 1px;
     border:none;
     border-top:1px solid #EEEEEE;
-    width: 760px;
+    width: 770px;
 }
 
 .blog-like-num {
@@ -638,6 +642,9 @@ body {
 
 .profile-edit-content {
     padding: 40px 30px 100px 30px;
+    background-color: #FFFFFF;
+    margin-top: 20px;
+    box-shadow: 0 0 5px #EEEEEE;
 }
 
 .profile-edit-info-avatar {
@@ -694,51 +701,52 @@ body {
     vertical-align: top;
 }
 .homepage-twitter-part {
-    padding: 0 20px 20px 20px;
+    padding: 10px 10px 0px 10px;
     display: inline-block;
     background-color: #EEEEEE;
-    top:inherit;
-    width: 820px;
-    float:right;
+    width: 830px;
+    min-height: 500px;
+    box-shadow: 0 0 10px #dddddd;
 }
 
-/* .obtain a{
+.obtain a{
   font-size:15px;
 }
 .obtain{
-  background-color: rgb(220,220,220);
+  /* background-color: rgb(220,220,220); */
 }
 .ant-menu-item .anticon + span, .ant-menu-submenu-title{
-  background-color: rgb(220,220,220);
-  width: 200px;
+  /* background-color: rgb(220,220,220); */
+  /* width: 200px; */
 }
 .secondary{
-  background-color : rgba(0,0,0,0.2);
+  /* background-color : rgba(0,0,0,0.2); */
 }
 .secondary:hover{
-  background-color: rgb(235,235,235);
-  -webkit-transition: all 1s ease;
+  /* background-color: rgb(235,235,235); */
+  /* -webkit-transition: all 1s ease;
   -moz-transition: all 1s ease;
   -o-transition: all 1s ease;
-  -ms-transition: all 1s ease;
->>>>>>> wx
-} */
+  -ms-transition: all 1s ease; */
+}
+
 .ant-menu-item .anticon + span, .ant-menu-submenu-title .anticon{
   font-size: 15px;
 }
 .ant-menu-item .anticon + span, .ant-menu-submenu-title .anticon + span{
   font-size: 15px;
-} */
-.main-page{
-  top:70px;
 }
-.menubk{
+/* .main-page{
+  top:70px;
+} */
+/* .menubk{
   background-color: gray;
   width: 250px;
   float:left;
   top:inherit;
-  position: fixed;
-}
+  height:inherit;
+  /* position: fixed; */
+/* }  */
 
 
 .homepage-twitter-part .activity-item{
@@ -876,7 +884,7 @@ body {
 .main-page {
     margin-top: 20px;
     background-color: #FFFFFF;
-    box-shadow: 0 0 5px #EEEEEE;
+    /* box-shadow: 0 0 5px #EEEEEE; */
 }
 
 .activity-page {
@@ -921,4 +929,10 @@ body {
 
 .help p{
   font-size: 16px;
+}
+.create-activity{
+  margin-top: 50px;
+}
+.dPicker{
+  width: 400px;
 }
