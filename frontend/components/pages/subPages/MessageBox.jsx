@@ -9,7 +9,7 @@ const MessageBox = function(props) {
 
     function magnifier () {
         if(!scale)
-            document.getElementById('message-img-'+photo.id).setAttribute("width", "560");
+            document.getElementById('message-img-'+photo.id).setAttribute("width", "600");
         else
             document.getElementById('message-img-'+photo.id).setAttribute("width", "100");
         scale = !scale;

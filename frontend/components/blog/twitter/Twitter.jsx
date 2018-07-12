@@ -32,7 +32,7 @@ const Twitter = function(props) {
 
     function magnifier () {
         if(!scale)
-            document.getElementById('blog-twitter-img' + item.id).setAttribute("width", "560");
+            document.getElementById('blog-twitter-img' + item.id).setAttribute("width", "600");
         else
             document.getElementById('blog-twitter-img' + item.id).setAttribute("width", "100");
         scale = !scale;

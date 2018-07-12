@@ -89,17 +89,27 @@ class LoginForm extends React.Component {
                     )}
                 </FormItem>
                 <FormItem>
-                    {getFieldDecorator('remember', {
-                        valuePropName: 'checked',
-                        initialValue: true,
-                    })(
-                        <Checkbox>Remember me</Checkbox>
-                    )}
-                    <br/>
-                    <Button type="primary" htmlType="submit" className="login-form-button">
-                        Log in
-                    </Button>
-                    Or <Link to={{ pathname: '/register'}}>register now!</Link>
+                  <div>
+                      {getFieldDecorator('remember', {
+                          valuePropName: 'checked',
+                          initialValue: true,
+                      })(
+                          <Checkbox>Remember me</Checkbox>
+                      )}
+                      <Link style={{float:'right'}} to={{ pathname: '/register'}}>forget password?</Link>
+                  </div>
+                      <div>
+                        <Button type="primary" htmlType="submit" className="login-form-button">
+                            Log in
+                        </Button>
+                      </div>
+                      <br/>
+                      <div className="register-form-botton">
+                        <center>
+                        Or&nbsp;
+                          <Link to={{ pathname: '/register'}}>register now!</Link>
+                        </center>
+                      </div>
                 </FormItem>
                 <LocalizedModal />
             </Form>

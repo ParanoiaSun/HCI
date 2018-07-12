@@ -85,6 +85,11 @@ var Header = function(props) {
                         ALBUM
                     </Link>
                 </div>
+                <div className="nav-item">
+                    <Link to={{ pathname: '/help'}} onClick={refresh}>
+                        HELP
+                    </Link>
+                </div>
             </div>
             <div className="separate-line right-item" />
             <div className="header-user right-item">
