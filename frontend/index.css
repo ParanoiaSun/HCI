@@ -124,7 +124,7 @@ body {
 }
 
 .content-div {
-    width: 900px;
+    width: 1080px;
     margin: 70px auto 0 auto;
     background-color: #FFFFFF;
     box-shadow: 0 0 5px #EEEEEE;
@@ -306,7 +306,7 @@ body {
     padding: 20px 20px 50px 20px;
     box-shadow: 0 0 5px #CCCCCC;
     margin-bottom: 20px;
-    width: 620px;
+    width: 800px;
     background-color: #FFFFFF;
 }
 
@@ -341,7 +341,7 @@ body {
     height: 1px;
     border:none;
     border-top:1px solid #EEEEEE;
-    width: 580px;
+    width: 760px;
 }
 
 .blog-like-num {
@@ -526,7 +526,7 @@ body {
 
 /* Admin */
 .admin-page {
-    width: 900px;
+    width: 1080px;
     margin: 0 auto;
     background-color: #FFFFFF;
     min-height: 100%;
@@ -698,7 +698,7 @@ body {
     display: inline-block;
     background-color: #EEEEEE;
     top:inherit;
-    width: 644px;
+    width: 820px;
     float:right;
 }
 
