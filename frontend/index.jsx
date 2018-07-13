@@ -5,6 +5,9 @@ const RegisterController = require('./components/pages/RegisterController');
 const AdminController = require('./components/admin/AdminController');
 const AdminEditController = require('./components/admin/AdminEditController');
 const Homepage = require('./components/pages/Homepage');
+
+const HelpController = require('./components/help/HelpController');
+
 const HotTwitterController = require('./components/pages/subPages/HotTwitterController');
 const JoinedActivityController = require('./components/pages/subPages/JoinedActivityController');
 const FollowTwitterController = require('./components/pages/subPages/FollowTwitterController');
@@ -45,6 +48,7 @@ ReactDOM.render(
                 <Route path="activity" component={JoinedActivityController} onEnter={requireAuth}/>
                 <Route path="message/:id" component={MessageController} onEnter={requireAuth}/>
             </Route>
+            <Route path="help" component={HelpController} onEnter={requireAuth}/>
             <Route path="search/:data" component={PhotoSearchController} onEnter={requireAuth}/>
             <Route path="photo/edit/:id" component={PhotoEdit} onEnter={requireAuth}/>
             <Route path="blog/:id" component={BlogController} onEnter={requireAuth}/>

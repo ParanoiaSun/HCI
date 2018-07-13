@@ -29,7 +29,7 @@ const Activity = function(props) {
                 <div className="activity-item-part">
                     {item.participant_num} people have joined this activity.
                 </div>
-                {checkSate(item.state ,item.id)}
+                <div className="right-button">{checkSate(item.state ,item.id)}</div>
             </div>;
         });
     }
@@ -104,9 +104,9 @@ const Activity = function(props) {
         <div className="create-activity">
             <div className="activity-title">Launch Your Own Activity</div>
             <div className="activity-title-input">
-                <Input placeholder="Activity Title" id="activity-title"/>
+            <Input placeholder="Activity Title" id="activity-title"/>
+            <RangePicker className="dPicker" onChange={onChange} format={dateFormat} placeholder={['Start Time', 'End Time']}/>
             </div>
-            <RangePicker onChange={onChange} format={dateFormat} placeholder={['Start Time', 'End Time']}/>
             <div className="activity-launch-content">
                 <TextArea id="activity-des"
                     placeholder="Activity Description" autosize={{ minRows: 2, maxRows: 6 }} />

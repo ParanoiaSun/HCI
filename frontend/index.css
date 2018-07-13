@@ -20,6 +20,9 @@ time, mark, audio, video, input {
     font-weight: normal;
     vertical-align: baseline;
 }
+a{
+  font-size: 14px;
+}
 
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
@@ -102,10 +105,15 @@ body {
 }
 
 .login-form-button {
-    margin-right: 5px;
     margin-top: 10px;
+    width: 100%;
+    float: left;
 }
-
+.register-form-button {
+    margin-top: 100px;
+    width: 100%;
+    text-align: center;
+}
 .log-out {
     font-size: 12px;
     margin-left: 10px;
@@ -116,11 +124,14 @@ body {
 .main-div {
     background-color: #EEEEEE;
     min-height: 100%;
+    padding-top: 70px;
 }
 
 .content-div {
     width: 1080px;
     margin: 0 auto;
+    background-color: #FFFFFF;
+    box-shadow: 0 0 5px #EEEEEE;
 }
 
 /* header */
@@ -129,6 +140,13 @@ body {
     padding: 10px 30px;
     max-height: 55px;
     min-width: 1024px;
+    width: 100%;
+
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 999;
+
 }
 
 .header-item {
@@ -242,10 +260,12 @@ body {
 
 /* blog */
 .blog-page {
-    padding: 30px;
+    padding: 15px;
+    min-height: 500px;
+    /* padding: 30px; */
     background-color: #FFFFFF;
     box-shadow: 0 0 5px #EEEEEE;
-    margin-top: 20px;
+    /* margin-top: 20px; */
 }
 
 .user-card {
@@ -277,19 +297,21 @@ body {
 
 .card-area {
     display: inline-block;
+    float: left;
     vertical-align: top;
+    margin-right: 5px;
 }
 
 .blog-twitter-content {
     display: inline-block;
-    margin-left: 30px;
+    margin-left: 20px;
 }
 
 .blog-twitter {
     padding: 20px 20px 50px 20px;
     box-shadow: 0 0 5px #CCCCCC;
     margin-bottom: 20px;
-    width: 790px;
+    width: 820px;
     background-color: #FFFFFF;
 }
 
@@ -324,6 +346,7 @@ body {
     height: 1px;
     border:none;
     border-top:1px solid #EEEEEE;
+    width: 780px;
 }
 
 .blog-like-num {
@@ -365,7 +388,7 @@ body {
 
 .activity-item-part {
     color: #7e8c8d;
-    text-align: right;
+    text-align: left;
 }
 
 .activity-item-join-state {
@@ -378,12 +401,14 @@ body {
     margin-bottom: 10px;
 }
 
+
 .activity-title-input {
-    margin-bottom: 10px;
+  margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .activity-title-input .ant-input {
-    width: 400px;
+    width: 490px;
 }
 
 
@@ -397,6 +422,11 @@ body {
     margin-top: 20px;
 }
 
+
+.right-button{
+   text-align: right;
+}
+
 /* login */
 #components-form-demo-normal-login .login-form {
     max-width: 300px;
@@ -405,6 +435,7 @@ body {
     float: right;
 }
 #components-form-demo-normal-login .login-form-button {
+
     width: 100%;
 }
 
@@ -502,7 +533,7 @@ body {
 
 /* Admin */
 .admin-page {
-    width: 900px;
+    width: 1080px;
     margin: 0 auto;
     background-color: #FFFFFF;
     min-height: 100%;
@@ -572,6 +603,7 @@ body {
 .admin-enter-button {
     text-align: center;
     font-weight: bolder;
+    font-size: 14px;
     color: #188FFF;
     text-decoration: underline;
     cursor: pointer;
@@ -667,18 +699,57 @@ body {
     height: 30px;
     margin: 15px 3px 3px 3px;
 }
-
 .homepage-sider {
     display: inline-block;
     vertical-align: top;
 }
-
 .homepage-twitter-part {
-    padding: 0 20px 20px 20px;
+    padding: 0px 0px 0px 10px;
     display: inline-block;
-    width: 824px;
     background-color: #EEEEEE;
+    width: 830px;
+    min-height: 500px;
 }
+
+.obtain a{
+  font-size:15px;
+}
+.obtain{
+  /* background-color: rgb(220,220,220); */
+}
+.ant-menu-item .anticon + span, .ant-menu-submenu-title{
+  /* background-color: rgb(220,220,220); */
+  /* width: 200px; */
+}
+.secondary{
+  /* background-color : rgba(0,0,0,0.2); */
+}
+.secondary:hover{
+  /* background-color: rgb(235,235,235); */
+  /* -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -ms-transition: all 1s ease; */
+}
+
+.ant-menu-item .anticon + span, .ant-menu-submenu-title .anticon{
+  font-size: 15px;
+}
+.ant-menu-item .anticon + span, .ant-menu-submenu-title .anticon + span{
+  font-size: 15px;
+}
+/* .main-page{
+  top:70px;
+} */
+/* .menubk{
+  background-color: gray;
+  width: 250px;
+  float:left;
+  top:inherit;
+  height:inherit;
+  /* position: fixed; */
+/* }  */
+
 
 .homepage-twitter-part .activity-item{
     margin: 20px 5px;
@@ -687,6 +758,7 @@ body {
 .homepage-twitter-part .blog-twitter {
     background-color: #FFFFFF;
     /*margin-left: 20px;*/
+
 }
 
 .unfollow-buttons {
@@ -814,7 +886,7 @@ body {
 .main-page {
     margin-top: 20px;
     background-color: #FFFFFF;
-    box-shadow: 0 0 5px #EEEEEE;
+    /* box-shadow: 0 0 5px #EEEEEE; */
 }
 
 .activity-page {
@@ -840,12 +912,29 @@ body {
     position: absolute;
     top:180px;
     left: 20px;
+  }
+.help{
+  margin-left: 30px;
+  margin-right: 30px;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  text-align: left;
 }
 
+.help h1{
+  font-size: 20px;
+}
 
+.help h2{
+  font-size: 18px;
+}
 
-
-
-
-
-
+.help p{
+  font-size: 16px;
+}
+.create-activity{
+  margin-top: 50px;
+}
+.dPicker{
+  float:right;
+}
