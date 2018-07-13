@@ -18,8 +18,10 @@ var Header = function(props) {
             document.getElementById("BLOG").className='active';
         else if(pathname.search("album")!=-1)
             document.getElementById("ALBUM").className='active';
-        else
+        else if(pathname.search("activity")!=-1)
             document.getElementById("ACTIVITY").className='active';
+        else if(pathname.search("help")!=-1)
+            document.getElementById("HELP").className='active';
     }
 
     function clearLogin () {
@@ -86,7 +88,7 @@ var Header = function(props) {
                     </Link>
                 </div>
                 <div className="nav-item">
-                    <Link to={{ pathname: '/help'}} onClick={refresh}>
+                    <Link id="HELP" to={{ pathname: '/help'}} onClick={refresh}>
                         HELP
                     </Link>
                 </div>
