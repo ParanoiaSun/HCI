@@ -1,5 +1,6 @@
 const React = require('react');
 import {Button, Input, DatePicker, message, Pagination} from 'antd';
+import { hashHistory } from 'react-router';
 import ActivityStore from '../../stores/ActivityStore';
 
 const null_info = <span style={{color: '#AAAAAA'}}>Oh!There is no one here~</span>;
@@ -11,6 +12,10 @@ const Activity = function(props) {
     const dateFormat = 'YYYY-MM-DD';
     let act_id = '';
     let start_time = ''; let end_time = '';
+    const currentPage = parseInt(props.currentPage);
+    const page = parseInt(props.page) + 1;
+
+    console.log(page);
 
     function activityList(array) {
         if(array === null || array.length === 0)
@@ -93,6 +98,11 @@ const Activity = function(props) {
         }
     }
 
+    function JumpToPage(page, event) {
+        hashHistory.replace('activity/' + event);
+        location.reload();
+    }
+
     return <div className="activity-wrapper">
         <div className="cover-div">
             <img id="activity-cover" src="img/cover2.jpg" alt=""/>
@@ -100,7 +110,7 @@ const Activity = function(props) {
         <div className="activity-page">
         <div className="activity-title"> Activity List</div>
         {activityList(activity)}
-        <Pagination defaultCurrent={1} total={50} />
+        <Pagination defaultCurrent={currentPage} pageSize={10} total={page} onChange={JumpToPage.bind(this, page)}/>
         <div className="create-activity">
             <div className="activity-title">Launch Your Own Activity</div>
             <div className="activity-title-input">

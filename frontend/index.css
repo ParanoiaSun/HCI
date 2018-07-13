@@ -938,3 +938,8 @@ body {
 .dPicker{
   float:right;
 }
+
+.ant-pagination {
+    margin: 0 auto;
+    text-align: center;
+}

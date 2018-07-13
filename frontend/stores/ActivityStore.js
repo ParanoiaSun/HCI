@@ -14,13 +14,83 @@ const TwitterStore = assign({}, EventEmitter.prototype, {
     join: false,
     quit: false,
     activity: {},
+    page: 0,
 
-    getActivities: function (page) {
+    getActivities: function () {
         $.ajax({
             async: false,
             type : 'GET',
             // url: './activity.json',
             url: server_url + '/activity/getAll',
+            data: {},
+            datatype : 'json',
+            success : function(data, textStatus, xhr) {
+                switch (xhr.status) {
+                    case 200:
+                        if(data.message === 25)
+                            this.activities = data.data;
+                        else
+                            message.error('Error With Database');
+                        break;
+                    default:
+                        message.error('Unknown Error');
+                        break;
+                }
+            }.bind(this),
+            error: function(jqXHR, textStatus, errorThrown) {
+                switch (jqXHR.status) {
+                    case 404:
+                        message.error('404 Not Found!');
+                        break;
+                    default:
+                        message.error('Unknown Error');
+                        break;
+                }
+            }
+        });
+        return this.activities;
+    },
+
+    getPage: function () {
+        $.ajax({
+            async: false,
+            type : 'GET',
+            // url: './activity.json',
+            url: server_url + '/activity/getByPage',
+            data: {},
+            datatype : 'json',
+            success : function(data, textStatus, xhr) {
+                switch (xhr.status) {
+                    case 200:
+                        if(data.message === 25)
+                            this.page = data.total;
+                        else
+                            message.error('Error With Database');
+                        break;
+                    default:
+                        message.error('Unknown Error');
+                        break;
+                }
+            }.bind(this),
+            error: function(jqXHR, textStatus, errorThrown) {
+                switch (jqXHR.status) {
+                    case 404:
+                        message.error('404 Not Found!');
+                        break;
+                    default:
+                        message.error('Unknown Error');
+                        break;
+                }
+            }
+        });
+        return this.page;
+    },
+
+    getActivitiesByPage: function (page) {
+        $.ajax({
+            async: false,
+            type : 'GET',
+            url: server_url + '/activity/getByPage/' + page,
             data: {},
             datatype : 'json',
             success : function(data, textStatus, xhr) {

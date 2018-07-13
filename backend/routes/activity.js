@@ -14,9 +14,12 @@ router.get('/getByPage/:page', function(req, res, next) {
     activityService.getActivitiesByPage(req.params.page, res);
 });
 
+router.get('/getByPage', function(req, res, next) {
+    activityService.getActivitiesPage(req, res);
+});
+
 router.get('/get/:id', function(req, res, next) {
     activityService.getActivityById(req.params.id, res);
-    // res.send({message: 20});
 });
 
 router.post('/add', function(req, res, next) {

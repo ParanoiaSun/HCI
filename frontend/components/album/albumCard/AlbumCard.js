@@ -1,5 +1,5 @@
 const React = require('react');
-import { Card, Tag, Input, Tooltip, Icon, message, Button, Modal } from 'antd';
+import { Card, Tag, Input, Tooltip, Icon, message, Button, Modal, Popconfirm } from 'antd';
 import { Link } from 'react-router';
 import AlbumStore from '../../../stores/AlbumStore';
 
@@ -133,10 +133,11 @@ const AlbumCard = function(props) {
     }
 
     function deleteAlbum (id) {
-        var r = confirm("Are you confirming to delete this album?");
-        if(r == true) {
-            AlbumStore.deleteAlbum(id);
-        }
+        AlbumStore.deleteAlbum(id);
+    }
+
+    function cancel(e) {
+        console.log(e);
     }
 
     return <Card title={album.album_name} className="album-card"
@@ -144,8 +145,9 @@ const AlbumCard = function(props) {
                      <Link to={{ pathname: '/album/id/' + album.album_id}}>
                          <Icon type="eye" style={{ fontSize: 16, color: '#08c',marginTop: 12 }}/>
                      </Link>
-                     <Icon onClick={deleteAlbum.bind(this, album.album_id)}
-                           type="delete" style={{ fontSize: 16, color: '#08c', marginLeft: 10 }}/>
+                     <Popconfirm title="Are you sure delete this album?" onConfirm={deleteAlbum.bind(this, album.album_id)} onCancel={cancel} okText="Yes" cancelText="No">
+                         <Icon type="delete" style={{ fontSize: 16, color: '#08c', marginLeft: 10 }}/>
+                     </Popconfirm>
                  </div>
                  }
                  style={{ width: 270 }}>

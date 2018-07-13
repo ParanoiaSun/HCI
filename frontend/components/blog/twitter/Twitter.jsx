@@ -2,7 +2,7 @@
  * Created by paranoia on 2017/12/12.
  */
 import React from 'react';
-import { Icon, Button, Input, message } from 'antd';
+import { Icon, Button, Input, message, Popconfirm } from 'antd';
 import { Link } from 'react-router';
 import TwitterStore from '../../../stores/TwitterStore';
 import UserStore from '../../../stores/UserStore';
@@ -22,10 +22,10 @@ const Twitter = function(props) {
     let scale = false;
     let isLike = TwitterStore.checkLike(localStorage.getItem('photoWall_user_id'), item.id);
     let likeHtml = isLike? <div className="blog-icon-like blog-icon">
-            <Button><Icon id={'blog-like-icon-' + item.id} type="like" style={{ fontSize: 14, color: '#08c' }} onClick={handleLike} /></Button>
+            <Button onClick={handleLike}><Icon id={'blog-like-icon-' + item.id} type="like" style={{ fontSize: 14, color: '#08c' }} /></Button>
             <span className="blog-like-num" id={ item.id + '-blog-like-num'}>{item.like_num}</span></div>:
         <div className="blog-icon-like blog-icon">
-            <Button><Icon id={'blog-like-icon-' + item.id} type="like" style={{ fontSize: 14, color: '#999' }} onClick={handleLike} /></Button>
+            <Button onClick={handleLike}><Icon id={'blog-like-icon-' + item.id} type="like" style={{ fontSize: 14, color: '#999' }} /></Button>
             <span className="blog-like-num" id={ item.id + '-blog-like-num'}>{item.like_num}</span>
         </div>;
     let isUser = (item.user_id === localStorage.getItem('photoWall_user_id'));
@@ -80,12 +80,14 @@ const Twitter = function(props) {
     }
 
     function handleLike () {
+        console.log(111);
         if(isLike) {
             const like = parseInt(document.getElementById(item.id + '-blog-like-num').innerHTML);
             document.getElementById(item.id + '-blog-like-num').innerHTML = (like-1).toString();
             document.getElementById('blog-like-icon-' + item.id).style.color = '#999';
             TwitterStore.cancelLike(localStorage.getItem('photoWall_user_id'), item.id);
         }else{
+            console.log(item.id);
             const like = parseInt(document.getElementById(item.id + '-blog-like-num').innerHTML);
             document.getElementById(item.id + '-blog-like-num').innerHTML = (like+1).toString();
             document.getElementById('blog-like-icon-' + item.id).style.color = '#08c';
@@ -94,6 +96,10 @@ const Twitter = function(props) {
         isLike = !isLike;
     }
 
+    function cancel(e) {
+        console.log(e);
+    }
+    
     //08c
     return <div className="blog-twitter">
         {
@@ -122,7 +128,9 @@ const Twitter = function(props) {
             <Button onClick={repostTwitter}><Icon type="rollback" style={{ fontSize: 14, color: '#08c' }}/></Button>
         </div>
         { isUser ? <div className="blog-icon-delete blog-icon">
-                <Button onClick={deleteTwitter}><Icon type="delete" style={{ fontSize: 14, color: '#08c' }}/></Button>
+                <Popconfirm title="Are you sure delete this album?" onConfirm={deleteTwitter} onCancel={cancel} okText="Yes" cancelText="No">
+                    <Icon type="delete" style={{ fontSize: 14, color: '#08c' }}/>
+                </Popconfirm>
             </div> : null }
         <hr/>
         {reviewList(reviews)}

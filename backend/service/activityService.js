@@ -44,7 +44,7 @@ exports.getAllActivities = function (req, res) {
 };
 
 exports.getActivitiesByPage = function (page, res) {
-    var sql = 'SELECT count(*) AS \'total\' FROM activity WHERE deleted=0 ORDER BY id DESC';
+    var sql = 'SELECT count(*) AS \'total\' FROM activity ORDER BY id DESC';
     var param = [];
     var total = 0;
     database.query(sql, param, function (err, result) {
@@ -53,7 +53,7 @@ exports.getActivitiesByPage = function (page, res) {
         } else {
             total = result[0].total;
             var sql = 'SELECT * FROM activity WHERE deleted=0 AND id>? AND id<? ORDER BY id DESC';
-            var param = [total-page*10-1, total-(page-1)*10+1];
+            var param = [total-page*10, total-(page-1)*10+1];
             console.log(result.total);
             var result1 = []; var i = 0;
             var state = [];
@@ -89,6 +89,22 @@ exports.getActivitiesByPage = function (page, res) {
                         });
                     }
                 }
+            });
+        }
+    });
+};
+
+exports.getActivitiesPage = function (page, res) {
+    var sql = 'SELECT count(*) AS \'total\' FROM activity ORDER BY id DESC';
+    var param = [];
+    var total = 0;
+    database.query(sql, param, function (err, result) {
+        if (err) {
+            res.send({message: 20});
+        } else {
+            res.send({
+                message: 25,
+                total: result[0].total
             });
         }
     });
