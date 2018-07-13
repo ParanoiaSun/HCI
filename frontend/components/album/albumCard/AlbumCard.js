@@ -150,7 +150,7 @@ const AlbumCard = function(props) {
                      </Popconfirm>
                  </div>
                  }
-                 style={{ width: 270 }}>
+                 style={{ width: 325, height: 170, margin: 13 }}>
         <EditableTagGroup />
         <EditButton />
     </Card>;

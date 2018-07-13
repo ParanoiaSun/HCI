@@ -119,7 +119,7 @@ const Activity = function(props) {
             </div>
             <div className="activity-launch-content">
                 <TextArea id="activity-des"
-                    placeholder="Activity Description" autosize={{ minRows: 2, maxRows: 6 }} />
+                    placeholder="Activity Description" autosize={{ minRows: 4, maxRows: 6 }} />
             </div>
             <Button type="primary" className="activity-launch-button" onClick={addActivity}> LAUNCH </Button>
         </div>

@@ -136,13 +136,13 @@ const Profile = function(props) {
             </div>
             <div className="profile-info">
                 <div className="profile-info-item">
-                    USERNAME: <span className="profile-info-content" >{userInfo.username}</span>
+                    <span className="profile-tag">USERNAME </span><span className="profile-info-content" >{userInfo.username}</span>
                 </div>
                 <div className="profile-info-item">
-                    ID: <span className="profile-info-content" >{userInfo.user_id}</span>
+                    <span className="profile-tag">ID </span><span className="profile-info-content" >{userInfo.user_id}</span>
                 </div>
                 <div className="profile-info-item">
-                    EMAIL: <span className="profile-info-content" >{userInfo.email}</span>
+                    <span className="profile-tag">EMAIL </span><span className="profile-info-content" >{userInfo.email}</span>
                 </div>
             </div>
             <div className="profile-detail">

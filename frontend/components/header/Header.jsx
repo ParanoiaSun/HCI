@@ -47,6 +47,7 @@ var Header = function(props) {
                 hashHistory.replace({
                     pathname: '/profile/' + temp.user_id
                 })
+                location.reload();
             }
         }else
             message.info('Please Input complete id.')

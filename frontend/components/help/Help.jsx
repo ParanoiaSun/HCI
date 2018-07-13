@@ -5,7 +5,7 @@ import { Link } from 'react-router';
 var Help = function(){
 
     return <div className="help">
-          <h1>介绍（请假装本文都是English且图文并茂）</h1>
+          <h1>介绍</h1>
           <br/>
           <p>   本摄影网站是一个立足国内面向全世界的中国摄影艺术作品展示的画廊。
           这里是摄影家展示才华和艺术殿堂，也是摄影爱好者的学习、交流的园地；

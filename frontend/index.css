@@ -130,7 +130,7 @@ body {
 .content-div {
     width: 1080px;
     margin: 0 auto;
-    background-color: #FFFFFF;
+    background-color: #EEEEEE;
     box-shadow: 0 0 5px #EEEEEE;
 }
 
@@ -389,6 +389,7 @@ body {
 .activity-item-part {
     color: #7e8c8d;
     text-align: left;
+    margin: 10px 0;
 }
 
 .activity-item-join-state {
@@ -752,7 +753,7 @@ body {
 
 
 .homepage-twitter-part .activity-item{
-    margin: 20px 5px;
+    margin: 0 0 20px 5px;
 }
 
 .homepage-twitter-part .blog-twitter {
@@ -778,6 +779,7 @@ body {
 .message-box {
     box-shadow: 0 0 5px #CCCCCC;
     margin-bottom: 20px;
+    background-color: #FFFFFF;
 }
 
 .review-icon {
@@ -916,9 +918,9 @@ body {
 .help{
   margin-left: 30px;
   margin-right: 30px;
-  padding-top: 20px;
-  padding-bottom: 30px;
+  padding: 20px 50px 30px 50px;
   text-align: left;
+  background-color: #FFFFFF;
 }
 
 .help h1{
@@ -942,4 +944,13 @@ body {
 .ant-pagination {
     margin: 0 auto;
     text-align: center;
+}
+
+.profile-tag {
+    display: inline-block;
+    width: 100px;
+}
+
+.ant-back-top {
+    right:50px;
 }

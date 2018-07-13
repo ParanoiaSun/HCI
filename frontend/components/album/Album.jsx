@@ -30,7 +30,7 @@ class AddButton extends React.Component {
     render() {
         return (
             <div>
-                <Button type="dashed" onClick={this.showModal}>Create New Album</Button>
+                <Button  style={{ width: 325 }} type="dashed" onClick={this.showModal}>Create New Album</Button>
                 <Modal
                     title="Create New Album"
                     visible={this.state.visible}
